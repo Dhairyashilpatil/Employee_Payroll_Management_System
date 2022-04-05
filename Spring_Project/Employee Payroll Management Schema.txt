@@ -1,0 +1,138 @@
+// Admin
+
+CREATE TABLE `admin` (
+  `id` int NOT NULL,
+  `email_id` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+// Attendence
+
+
+CREATE TABLE `attendance` (
+  `emp_id` bigint NOT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+// Employee
+
+
+CREATE TABLE `employee` (
+  `emp_id` int NOT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `designation` varchar(255) DEFAULT NULL,
+  `dob` varchar(255) DEFAULT NULL,
+  `email_id` varchar(255) DEFAULT NULL,
+  `f_name` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  `l_name` varchar(255) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `mob_no` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `pincode` int NOT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `street` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`emp_id`),
+  UNIQUE KEY `UK_af534w03av8srcldugewrmpbi` (`email_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+// Hibernate_Sequence
+
+
+CREATE TABLE `hibernate_sequence` (
+  `next_val` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+
+// Leaves
+
+
+CREATE TABLE `leaves` (
+  `emp_id` bigint NOT NULL,
+  `duration` varchar(255) DEFAULT NULL,
+  `end_date` varchar(255) DEFAULT NULL,
+  `leave_type` varchar(255) DEFAULT NULL,
+  `start_date` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+// Salary
+
+
+CREATE TABLE `salary` (
+  `sal_id` int NOT NULL,
+  `basic_pay` double DEFAULT NULL,
+  `da` double DEFAULT NULL,
+  `deduction` double DEFAULT NULL,
+  `emp_id` int NOT NULL,
+  `gross_salary` double DEFAULT NULL,
+  `hra` double DEFAULT NULL,
+  `net_pay` double DEFAULT NULL,
+  `pf_amount` double DEFAULT NULL,
+  `tax` double DEFAULT NULL,
+  `tran_date` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`sal_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+
+
+// Schedule
+
+
+CREATE TABLE `schedule` (
+  `emp_id` bigint NOT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `duration` varchar(255) DEFAULT NULL,
+  `shift` varchar(255) DEFAULT NULL,
+  `end_time` varchar(255) DEFAULT NULL,
+  `starting_time` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+//  Seq
+
+
+
+CREATE TABLE `seq` (
+  `next_val` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+// Timesheet
+
+
+CREATE TABLE `timesheet` (
+  `emp_id` int NOT NULL,
+  `break_time` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `in_time` varchar(255) DEFAULT NULL,
+  `out_time` varchar(255) DEFAULT NULL,
+  `overtime_hours` varchar(255) DEFAULT NULL,
+  `regular_time` varchar(255) DEFAULT NULL,
+  `total_hours` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+
+
+
